@@ -21,7 +21,7 @@ float zoom{ 1.0 };
 int num_frames{ 0 };
 float last_time{ 0.0f };
 float ms_frame;
-bool start = {false};
+bool start = { false };
 float vertices[] =
 {
     //    x      y      z   
@@ -114,7 +114,7 @@ int main()
     glBindVertexArray(0);
 
     Shader our_shader("shader.vert", "shader.frag");
-        
+
     last_time = glfwGetTime();
 
     glEnable(GL_DEPTH_TEST);
@@ -234,4 +234,3 @@ void processInput(GLFWwindow* window)
     }
 
 }
-
