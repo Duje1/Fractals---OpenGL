@@ -40,7 +40,10 @@ void main()
 
     float f = iter/150.0f;
     vec3 col = vec3(f);
-    col *= hash13(f);
-    col = pow(col, vec3(.46));
-    frag_color = vec4(col, 1.0f);
+    col += hash13(f);
+    //gamma
+    //col = pow(col, vec3(.46));
+
+    if(iter == MAX_ITERATIONS) frag_color = vec4(0.,0.,0.,1.);
+    else  frag_color = vec4(col, 1.0);
 }
